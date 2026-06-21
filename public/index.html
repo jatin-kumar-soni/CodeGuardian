@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CodeGuardian Dashboard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h1>
+            🛡️ CodeGuardian
+        </h1>
+
+        <p>
+            Developer Workspace Inspector
+        </p>
+
+    </nav>
+
+    <main>
+
+        <!-- System Monitor -->
+
+        <section class="grid">
+
+            <div class="card">
+                <h3>Hostname</h3>
+                <p id="hostname">
+                    Loading...
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Platform</h3>
+                <p id="platform">
+                    Loading...
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Node Version</h3>
+                <p id="nodeVersion">
+                    Loading...
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>CPU Cores</h3>
+                <p id="cpu">
+                    Loading...
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Health Score -->
+
+        <section class="health-section">
+
+            <div class="health-card">
+
+                <h2>
+                    ❤️ Project Health
+                </h2>
+
+                <div class="circle">
+
+                    <div class="inner-circle">
+
+                        <span id="healthScore">
+                            100%
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Workspace Statistics -->
+
+        <section class="grid">
+
+            <div class="card stat">
+                <h3>Total Files</h3>
+                <p id="files">0</p>
+            </div>
+
+            <div class="card stat">
+                <h3>Total Folders</h3>
+                <p id="folders">0</p>
+            </div>
+
+            <div class="card stat">
+                <h3>JS Files</h3>
+                <p id="jsfiles">0</p>
+            </div>
+
+        </section>
+
+        <!-- CRUD Manager -->
+
+        <section class="crud">
+
+            <h2>
+                📁 File Manager
+            </h2>
+
+            <input
+                type="text"
+                id="path"
+                placeholder="example: test.js"
+            >
+
+            <textarea
+                id="content"
+                placeholder="Enter file content..."
+            ></textarea>
+
+            <div class="btn-group">
+
+                <button onclick="createFile()">
+                    Create
+                </button>
+
+                <button onclick="readFileData()">
+                    Read
+                </button>
+
+                <button onclick="updateFileData()">
+                    Update
+                </button>
+
+                <button onclick="deleteFileData()">
+                    Delete
+                </button>
+
+            </div>
+
+            <br>
+
+            <button
+                onclick="generateReport()"
+            >
+                📊 Generate Report
+            </button>
+
+        </section>
+
+        <!-- Environment Variables -->
+
+        <section class="env-section">
+
+           <h2>🖥️ Detailed System Information</h2>
+
+            <div id="envTable">
+            </div>
+
+        </section>
+
+        <!-- Activity Timeline -->
+
+        <section class="output-section">
+
+            <h2>
+                📝 Activity Timeline
+            </h2>
+
+            <div id="output">
+
+                <div class="log">
+
+                    Dashboard Loaded
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Toast Container -->
+
+    <div id="toastContainer"></div>
+
+    <footer>
+
+        <p>
+            Built with Node.js + Express
+        </p>
+
+        <p>
+            CodeGuardian Hackathon Project
+        </p>
+
+        <p>
+            © 2026 Jatin Kumar Soni
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
